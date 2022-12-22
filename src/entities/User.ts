@@ -1,4 +1,3 @@
-import { Address } from 'cluster';
 import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { Adress } from './Adress';
 
@@ -22,6 +21,9 @@ export class User{
 
     @Column({type: "text"})
     email_user: string;
+
+    @Column({type: "text"})
+    password_user: string;
     
     @OneToOne(() => Adress)
     @JoinColumn()
