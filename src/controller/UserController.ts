@@ -56,12 +56,28 @@ export class UserController{
                         number_adress_user,
                         rua_user
                     }
+
+                    const allDataUser ={
+                        first_name,
+                        last_name,
+                        cpf_user,
+                        email_user,
+                        password_user,
+                        number_user,
+                        bairro_user,
+                        cep_user,
+                        complemento_user,
+                        number_adress_user,
+                        rua_user
+                    }
                     
                     const newUserInfo = user_info_Repository.create(dataUserInfo);
                     const newUserAdress = user_adress_Repository.create(dataUserAdress);
                     
                     await user_info_Repository.save(newUserInfo);
                     await user_adress_Repository.save(newUserAdress);
+
+                    return res.status(201).json(allDataUser);
                 } 
         } catch (error) {
             console.log(error);
