@@ -49,5 +49,19 @@
 }
 
 .container-logo{
-    margin-left: 15%;
+    margin-left: 18%;
+}
+
+.container-form{
+    margin-left:15%;
+    margin-right: 15%;
+    background-color: #0477BF;
+    margin-top: 5%;
+    padding: 5%;
+}
+
+.title{
+    margin-top: 1%;
+    margin-left: 40%;
+    color: #f2f2f2;
 }
