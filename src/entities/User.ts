@@ -25,7 +25,7 @@ export class User{
     @Column({type: "text"})
     password_user: string;
     
-    @OneToOne(() => Adress)
+    @OneToOne(type => Adress, User => User)
     @JoinColumn()
     adress_id: Adress
 }

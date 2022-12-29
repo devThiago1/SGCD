@@ -42,31 +42,99 @@
             </div>
         </nav>
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <div class="container-form">
-        <form>
+        <form action="/cadastroData" method="POST">
             <h2 class="title">CADASTRO</h2>
             <div class="mb-3 mt-5">
                 <div class="input-group">
                     <span class="input-group-text">Primeiro/Último nome:</span>
-                    <input type="text" aria-label="First name" class="form-control">
-                    <input type="text" aria-label="Last name" class="form-control">
+                    <input type="text" aria-label="First name" class="form-control" placeholder="Primeiro Nome" name="first_name_user">
+                    <input type="text" aria-label="Last name" class="form-control" placeholder="Último Nome" name="last_name_user">
                 </div>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Email:
                 </label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email_user">
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label text-light">Senha:</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password_user">
             </div>
-            
-            <button type="submit" class="btn btn-primary">CADASTRAR</button>
-          </form>
+            <div class="mb-3 ">
+                <label for="exampleInputPassword1" class="form-label text-light">CPF:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">EX:000.000.000-00</span>
+                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="cpf_user">
+                </div>
+            </div>
+            <div class="mb-3 ">
+                <label for="exampleInputPassword1" class="form-label text-light">N°Celular:         (Disponível para receber notificações de avisos)</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">EX: (99) 999999999</span>
+                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="number_user">
+                </div>
+            </div>
+            <h3 class="childText">ENDEREÇO</h3>
+            <div class="mb-3 ">
+                <label for="cep" class="form-label text-light">CEP:         (Da localização que você deseja receber as notificações)</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">EX: 00.000-000</span>
+                    <input type="text" id="cep" class="form-control" placeholder="Insira aqui" name="cep_user">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-light">
+                    Bairro:
+                </label>
+                <input type="text" class="form-control" id="bairro" placeholder="name@example.com" name="bairro_user"> 
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-light">
+                    Rua:
+                </label>
+                <input type="text" class="form-control" id="logradouro" placeholder="name@example.com" name="rua_user">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-light">
+                    Número do Endereço:
+                </label>
+                <input type="text" class="form-control" id="numero" placeholder="name@example.com" name="number_adress_user">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-light">
+                    Complemento
+                </label>
+                <input type="text" class="form-control" id="complemento" placeholder="name@example.com" name="complemento_user">
+            </div>
+            <button type="submit" class="btn btn-light">CADASTRAR</button>
+        </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+		<script>
+			
+			$("#cep").blur(function(){
+				
+				var cep = this.value.replace(/[^0-9]/, "");
+			
+				if(cep.length != 8){
+					return false;
+				}
+				
+				var url = "https://viacep.com.br/ws/"+cep+"/json/";
+				
+				$.getJSON(url, function(dadosRetorno){
+					try{
+						
+						$("#logradouro").val(dadosRetorno.logradouro);
+						$("#bairro").val(dadosRetorno.bairro);
+						$("#cidade").val(dadosRetorno.localidade);
+						$("#uf").val(dadosRetorno.uf);
+					}catch(ex){}
+				});
+			});
+		</script>
     
 </body>
 

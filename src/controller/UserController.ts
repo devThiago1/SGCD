@@ -7,8 +7,8 @@ export class UserController{
     async addUser(req: Request, res: Response){
         
 
-        const first_name = req.body.first_name;
-        const last_name = req.body.last_name;
+        const first_name_user = req.body.first_name_user;
+        const last_name_user = req.body.last_name_user;
         const cpf_user = req.body.cpf_user;
         const email_user = req.body.email_user;
         const password_user = req.body.password_user;
@@ -21,8 +21,8 @@ export class UserController{
 
         try{
             const formSchema = Joi.object().keys({
-                first_name: Joi.string().required().empty(''),
-                last_name: Joi.string().required().empty(''),
+                first_name_user: Joi.string().required().empty(''),
+                last_name_user: Joi.string().required().empty(''),
                 cpf_user: Joi.string().required().empty(''),
                 email_user: Joi.string().email().required().empty(''),
                 password_user: Joi.string().required().empty(''),
@@ -42,8 +42,8 @@ export class UserController{
                 }
                 } else {
                     const dataUserInfo = {
-                        first_name,
-                        last_name,
+                        first_name_user,
+                        last_name_user,
                         cpf_user,
                         email_user,
                         password_user,
@@ -58,8 +58,8 @@ export class UserController{
                     }
 
                     const allDataUser ={
-                        first_name,
-                        last_name,
+                        first_name_user,
+                        last_name_user,
                         cpf_user,
                         email_user,
                         password_user,
