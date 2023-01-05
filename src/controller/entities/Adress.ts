@@ -11,7 +11,6 @@ import { User } from "./User";
 export class Adress{
 
     @PrimaryGeneratedColumn()
-    @OneToOne(type => User, Adress => Adress)
     id:number;
 
     @Column({type: "text"})

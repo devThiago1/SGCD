@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 import { user_adress_Repository } from "../repositories/user_adress_Repository";
 import { user_info_Repository } from "../repositories/user_info_Repository";
 import * as Joi from 'joi';
+import { User } from "./entities/User";
+import { Adress } from "./entities/Adress";
 
 export class UserController{
     async addUser(req: Request, res: Response){
@@ -49,6 +51,8 @@ export class UserController{
                         password_user,
                         number_user
                     }
+                 
+                    
                     const dataUserAdress = {
                         bairro_user,
                         cep_user,
@@ -56,7 +60,8 @@ export class UserController{
                         number_adress_user,
                         rua_user
                     }
-
+                    
+                    
                     const allDataUser ={
                         first_name_user,
                         last_name_user,
@@ -70,10 +75,11 @@ export class UserController{
                         number_adress_user,
                         rua_user
                     }
-                    
+
+
                     const newUserInfo = user_info_Repository.create(dataUserInfo);
-                    const newUserAdress = user_adress_Repository.create(dataUserAdress);
-                    
+                    const newUserAdress =  user_adress_Repository.create(dataUserAdress);
+
                     await user_info_Repository.save(newUserInfo);
                     await user_adress_Repository.save(newUserAdress);
 

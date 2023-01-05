@@ -48,67 +48,67 @@
             <div class="mb-3 mt-5">
                 <div class="input-group">
                     <span class="input-group-text">Primeiro/Último nome:</span>
-                    <input type="text" aria-label="First name" class="form-control" placeholder="Primeiro Nome" name="first_name_user">
-                    <input type="text" aria-label="Last name" class="form-control" placeholder="Último Nome" name="last_name_user">
+                    <input type="text" aria-label="First name" class="form-control" placeholder="Primeiro Nome" name="first_name_user" required>
+                    <input type="text" aria-label="Last name" class="form-control" placeholder="Último Nome" name="last_name_user" required>
                 </div>
-            </div>
+            </div> 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Email:
                 </label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email_user">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email_user" required>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label text-light">Senha:</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" name="password_user">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password_user" required>
             </div>
             <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label text-light">CPF:</label>
                 <div class="input-group">
                     <span class="input-group-text" id="addon-wrapping">EX:000.000.000-00</span>
-                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="cpf_user">
+                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="cpf_user" required>
                 </div>
             </div>
             <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label text-light">N°Celular:         (Disponível para receber notificações de avisos)</label>
                 <div class="input-group">
                     <span class="input-group-text" id="addon-wrapping">EX: (99) 999999999</span>
-                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="number_user">
+                    <input type="text" class="form-control" placeholder="Insira aqui" aria-label="Username" aria-describedby="addon-wrapping" name="number_user" required>
                 </div>
             </div>
             <h3 class="childText">ENDEREÇO</h3>
-            <div class="mb-3 ">
+            <div class="mb-3 mt-5">
                 <label for="cep" class="form-label text-light">CEP:         (Da localização que você deseja receber as notificações)</label>
                 <div class="input-group">
                     <span class="input-group-text" id="addon-wrapping">EX: 00.000-000</span>
-                    <input type="text" id="cep" class="form-control" placeholder="Insira aqui" name="cep_user">
+                    <input type="text" id="cep" class="form-control" placeholder="Insira aqui" name="cep_user" required>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Bairro:
                 </label>
-                <input type="text" class="form-control" id="bairro" placeholder="name@example.com" name="bairro_user"> 
+                <input type="text" class="form-control" id="bairro" placeholder="" name="bairro_user" required> 
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Rua:
                 </label>
-                <input type="text" class="form-control" id="logradouro" placeholder="name@example.com" name="rua_user">
+                <input type="text" class="form-control" id="logradouro" placeholder="" name="rua_user" required>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Número do Endereço:
                 </label>
-                <input type="text" class="form-control" id="numero" placeholder="name@example.com" name="number_adress_user">
+                <input type="text" class="form-control" id="numero" placeholder="" name="number_adress_user" required>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-light">
                     Complemento
                 </label>
-                <input type="text" class="form-control" id="complemento" placeholder="name@example.com" name="complemento_user">
+                <input type="text" class="form-control" id="complemento" placeholder="" name="complemento_user" required>
             </div>
-            <button type="submit" class="btn btn-light">CADASTRAR</button>
+            <button type="submit" class="btn btn-light" style="margin-top: 5%; margin-left: 40%;">CADASTRAR</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
