@@ -49,15 +49,23 @@
 }
 
 .container-logo{
-    margin-left: 18%;
+    margin-left: 20%;
 }
 
-.container-box{
-    margin-left:12%;
-    margin-right: 12%;
-    background-color: #0477BF;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding: 7%;
-    border-radius: 3%;
+#container-menu{
+    margin-left: 30%;
 }
+
+.img{
+    width: 90px;
+    height: 90px;
+}
+
+.image{
+    margin-top: 3%;
+}
+
+.text-pr{
+    margin-bottom: 15%;
+}
+

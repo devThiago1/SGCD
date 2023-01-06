@@ -83,7 +83,7 @@ export class UserController{
                     await user_info_Repository.save(newUserInfo);
                     await user_adress_Repository.save(newUserAdress);
 
-                    return res.status(201).json(allDataUser);
+                    return res.status(201).sendFile('/sucessCadastro');
                 } 
         } catch (error) {
             console.log(error);
