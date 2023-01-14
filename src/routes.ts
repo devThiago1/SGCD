@@ -23,6 +23,12 @@ routes.get('/sucessCadastro',(req:Request, res:Response) => {
 routes.get('/public/css/sucessForms.css', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/css/sucessForms.css');
 })
+routes.get('/HomePage', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/view/Home.html');
+});
+routes.get('/public/css/home.css', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/css/home.css');
+})
 routes.post('/cadastroData', new UserController().addUser);
 
 
