@@ -53,10 +53,6 @@ main{
     cursor: pointer;
 }
 
-.container-logo{
-    
-}
-
 .home-link{
     list-style: none;
     text-decoration: none;
@@ -92,6 +88,7 @@ main{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     margin-bottom: 4%;
+    font-size: 150%;
 }
 
 .desc-text{
@@ -108,8 +105,45 @@ main{
 .container-image{
     display: flex;
     justify-content: flex-end;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-left: 50%;
-    margin-top: -14%;
+    margin-top: -22%;
     transform: scale(1.2);
+}
+
+@media(max-width:768px){
+    .container-image{
+        display: none;
+    }
+    .home-link{
+        list-style: none;
+        text-decoration: none;
+        color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        border-radius: 40px;
+        border: #0477BF;
+        letter-spacing: 1px;
+        transition: ease .50s;  
+        background-color: #0477BF;
+        margin-top: 5%;
+        margin-right: -2%;
+        margin-top: 10%;
+    }
+    
+    .home-link:hover{
+        transform: scale(1.1);
+        color: #f2f2f2;
+        border: 7px;
+        display: flex;
+        justify-content: center;   
+    }
+    .container-text{
+    margin-right: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+    }
+    main{
+        background-image: url("/public/background.png");
+    }
 }
