@@ -11,6 +11,12 @@ routes.get('/formularioCadastro', (req:Request, res:Response) => {
 routes.get('/public/logoSGCD-removebg-preview.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/logoSGCD-removebg-preview.png');
   });
+routes.get('/public/background.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/background.png');
+  });
+routes.get('/public/example.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/example.png');
+  });
 routes.get('/public/user.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/user.png');
 });
