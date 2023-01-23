@@ -10,6 +10,7 @@ main{
 
 .container-navbar{
     background-color: #0477BF;
+    display: inline;
 }
 
 #navbar-options{
@@ -111,6 +112,24 @@ main{
     transform: scale(1.2);
 }
 
+.container-obj{
+    
+    padding: 100px;
+    background-color: #0477BF;
+}
+
+.title-desc{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f2f2f2;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    font-size: 200%;
+}
+
 @media(max-width:768px){
     .container-image{
         display: none;
@@ -145,5 +164,12 @@ main{
     }
     main{
         background-image: url("/public/background.png");
+    }
+    .container-obj{
+        background-color: #0477BF;
+    }
+    #card-group{
+        margin-right: 10% !important;
+
     }
 }

@@ -17,6 +17,15 @@ routes.get('/public/background.png', (req:Request, res:Response) => {
 routes.get('/public/example.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/example.png');
   });
+routes.get('/public/app-card.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/app-card.png');
+})
+routes.get('/public/eficiencia-card.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/eficiencia-card.png');
+});
+routes.get('/public/relogio-card.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/relogio-card.png');
+});
 routes.get('/public/user.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/user.png');
 });

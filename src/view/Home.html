@@ -20,18 +20,15 @@
 </head>
 <body>
     <div class="container-navbar">
-        <nav class="navbar navbar-expand-lg opacity-40">
+        <nav class="navbar navbar-expand-lg opacity-40 bg-primary">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav  mb-2 mb-lg-0 ms-5" id="navbar-options">
+                        <ul class="navbar-nav  mb-2 mb-lg-0 ms-5" id="navbar-options" style="padding: 20px;">
                             <li class="nav-item">
-                                <a  class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link" href="#">Suporte</a>
+                                <a  class="nav-link" aria-current="page" href="#" style=" padding: 15px;">CADASTRA-SE</a>
                             </li>
                         </ul>
                     </div>
@@ -60,32 +57,58 @@
         </div>
     </main>
     <div class="container-obj">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h3 class="title-desc">PRIORIDADES</h3>
+        
+        <div class="card-group" style="margin-top: 5%;" id="card-group">
+            <div class="card p-4 me-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <img src="/public/app-card.png" class="card-img-top mx-auto" alt="app-card" style="height: 200px;width: 300px; margin-top: 3%;">
+                <div class="card-body">
+                    <h4 class="card-title" style="display: flex; justify-content: center;">INTERATIVADE</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
             </div>
-        </div>
-                <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card p-4 me-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <img src="/public/eficiencia-card.png" class="card-img-top mx-auto" alt="eficiencia-card" style="height: 150px;width: 150px; margin-top: 10%;">
+                <div class="card-body">
+                    <h4 class="card-title mt-4"  style="display: flex; justify-content: center;">EFICIÊNCIA</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
             </div>
-        </div>
-                <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card p-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <img src="/public/relogio-card.png" class="card-img-top mx-auto" alt="relogio-card" style="height: 150px;width: 200px; left: 100px; ; margin-top: 10%;">
+                <div class="card-body">
+                    <h4 class="card-title mt-4" style="display: flex; justify-content: center;">DISPONIBILIDADE</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
             </div>
         </div>
     </div>
-
+    <div class="container-info">
+        <h3 class="title-desc">SGCD</h3>
+        
+        <div class="card-group" style="margin-top: 5%;" id="card-group">
+            <div class="card p-4 me-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <div class="card-body">
+                    <h4 class="card-title" style="display: flex; justify-content: center;">INTERATIVADE</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card p-4 me-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <img src="/public/eficiencia-card.png" class="card-img-top mx-auto" alt="eficiencia-card" style="height: 150px;width: 150px; margin-top: 10%;">
+                <div class="card-body">
+                    <h4 class="card-title mt-4"  style="display: flex; justify-content: center;">EFICIÊNCIA</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card p-4 border-0" style="width: 18rem; border-radius: 30px;">
+                <img src="/public/relogio-card.png" class="card-img-top mx-auto" alt="relogio-card" style="height: 150px;width: 200px; left: 100px; ; margin-top: 10%;">
+                <div class="card-body">
+                    <h4 class="card-title mt-4" style="display: flex; justify-content: center;">DISPONIBILIDADE</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="p-5 bg-primary">
         <div class="container-float">
             <p class="float-end mb-3">
