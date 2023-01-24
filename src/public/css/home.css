@@ -129,6 +129,40 @@ main{
     margin-bottom: 6%;
     font-size: 200%;
 }
+.title-info{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 4%;
+    font-size: 200%;
+}
+
+.desc-link{
+    list-style: none;
+    text-decoration: none;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+    border: #0477BF;
+    letter-spacing: 1px;
+    transition: ease .50s;  
+    padding: 20px 40px;   
+    margin-right: 40%;
+    margin-left: 40%;
+    background-color: #0477BF;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.desc-link:hover{
+    transform: scale(1.1);
+    color: #f2f2f2;
+    border: 7px;
+    display: flex;
+    justify-content: center;   
+}
 
 @media(max-width:768px){
     .container-image{
@@ -169,7 +203,12 @@ main{
         background-color: #0477BF;
     }
     #card-group{
-        margin-right: 10% !important;
-
+       margin-right: 10% !important;
+    }
+    .desc-link{
+        margin-right: 20%;
+        margin-left: 20%;
+        display: flex;
+        
     }
 }

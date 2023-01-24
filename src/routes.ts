@@ -20,6 +20,9 @@ routes.get('/public/example.png', (req:Request, res:Response) => {
 routes.get('/public/app-card.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/app-card.png');
 })
+routes.get('/public/celular-desc.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/celular-desc.png');
+})
 routes.get('/public/eficiencia-card.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/eficiencia-card.png');
 });
