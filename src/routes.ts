@@ -17,6 +17,9 @@ routes.get('/public/background.png', (req:Request, res:Response) => {
 routes.get('/public/example.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/example.png');
   });
+routes.get('/public/sucess-card.png', (req:Request, res:Response) => {
+    res.sendFile(__dirname + '/public/sucess-card.png');
+  });
 routes.get('/public/app-card.png', (req:Request, res:Response) => {
     res.sendFile(__dirname + '/public/app-card.png');
 })
