@@ -216,4 +216,11 @@ main{
     .container-info{
         padding: 55px;
     }
+    .container-logo{
+        display: flex;
+        justify-content: center;
+    }
+    #app-card{
+        display: none;
+    }
 }
