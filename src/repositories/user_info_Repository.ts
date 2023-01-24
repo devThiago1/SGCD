@@ -1,5 +1,5 @@
 import { AppDataSource } from "../data-source";
-import { User } from "../controller/entities/User";
+import { User } from "../entities/User";
 
 
 

@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 import { user_adress_Repository } from "../repositories/user_adress_Repository";
 import { user_info_Repository } from "../repositories/user_info_Repository";
 import * as Joi from 'joi';
+import { User } from "./entities/User";
+import { Adress } from "./entities/Adress";
 
 export class UserController{
     async addUser(req: Request, res: Response){
@@ -21,17 +23,17 @@ export class UserController{
 
         try{
             const formSchema = Joi.object().keys({
-                first_name_user: Joi.string().required().empty(''),
-                last_name_user: Joi.string().required().empty(''),
-                cpf_user: Joi.string().required().empty(''),
-                email_user: Joi.string().email().required().empty(''),
+                first_name_user: Joi.string().alphanum().min(3).max(30).required(),
+                last_name_user: Joi.string().alphanum().min(3).max(30).required(),
+                cpf_user: Joi.string().required(),
+                email_user: Joi.string().email().required(),
                 password_user: Joi.string().required().empty(''),
                 number_user: Joi.string().required().empty(''),
-                bairro_user: Joi.string().required().empty(''),
-                cep_user: Joi.string().required().empty(''),
+                bairro_user: Joi.string().alphanum().min(3).max(30).required(),
+                cep_user: Joi.string().required(),
                 complemento_user: Joi.string().optional().empty(''),
                 number_adress_user: Joi.string().required().empty(''),
-                rua_user: Joi.string().required().empty('')
+                rua_user: Joi.string().required()
             })
 
             const valid  = formSchema.validate(req.body);
@@ -41,23 +43,25 @@ export class UserController{
                     return res.status(404).json({message: 'Campos invalidos'})
                 }
                 } else {
-                    const dataUserInfo = {
-                        first_name_user,
-                        last_name_user,
-                        cpf_user,
-                        email_user,
-                        password_user,
-                        number_user
-                    }
-                 
+            
+                    const Address = new Adress();
+                    Address.bairro_user = bairro_user;
+                    Address.rua_user = rua_user;
+                    Address.cep_user = cep_user;
+                    Address.complemento_user = complemento_user;
+                    Address.number_adress_user = number_adress_user;
+                    await user_adress_Repository.manager.save(Address)
                     
-                    const dataUserAdress = {
-                        bairro_user,
-                        cep_user,
-                        complemento_user,
-                        number_adress_user,
-                        rua_user
-                    }
+                    const user = new User();
+                    user.first_name_user = first_name_user;
+                    user.last_name_user = last_name_user;
+                    user.email_user = email_user;
+                    user.password_user = password_user;
+                    user.cpf_user = cpf_user;
+                    user.number_user = number_user;
+                    user.adress = Address;
+                    await user_info_Repository.manager.save(user);
+
                     
                     
                     const allDataUser ={
@@ -73,13 +77,7 @@ export class UserController{
                         number_adress_user,
                         rua_user
                     }
-
-
-                    const newUserInfo = user_info_Repository.create(dataUserInfo);
-                    const newUserAdress =  user_adress_Repository.create(dataUserAdress);
-
-                    await user_info_Repository.save(newUserInfo);
-                    await user_adress_Repository.save(newUserAdress);
+                    
 
                     return res.status(201).redirect('/sucessCadastro');
                 } 

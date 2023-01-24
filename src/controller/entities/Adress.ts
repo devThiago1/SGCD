@@ -1,3 +1,4 @@
+import { type } from "os";
 import {
     Entity,
     PrimaryGeneratedColumn,
@@ -26,5 +27,6 @@ export class Adress{
     cep_user: string;
 
     @Column("varchar", { length: 7})
-    number_adress_user: number;    
+    number_adress_user: number;   
+    
 }
