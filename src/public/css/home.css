@@ -201,14 +201,19 @@ main{
     }
     .container-obj{
         background-color: #0477BF;
-    }
-    #card-group{
-       margin-right: 10% !important;
+        padding: 55px;
     }
     .desc-link{
         margin-right: 20%;
         margin-left: 20%;
         display: flex;
         
+    }
+    #desc{
+        font-size: 100%;
+        font-weight: bold;
+    }
+    .container-info{
+        padding: 55px;
     }
 }
