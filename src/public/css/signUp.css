@@ -72,3 +72,23 @@
     color: #f2f2f2;
     margin-top: 7%;
 }
+
+@media(max-width:768px){
+    .container-logo{
+        display: flex;
+        justify-content: center;
+        margin-left: 35%;
+    }
+   
+}
+@media(max-width:500px){
+    .container-logo{
+        display: flex;
+        justify-content: center;
+        margin-left: 20%;
+    }
+    .container-form{
+        margin-top: 7%;
+        border:none;
+    }
+}
