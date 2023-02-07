@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/devThiago1/WebsiteToSignUp#readme",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.15",
     "@types/node": "^18.11.17",
     "body-parser": "^1.20.1",
@@ -28,6 +29,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "joi": "^17.7.0",

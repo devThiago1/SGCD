@@ -5,6 +5,7 @@ import * as Joi from 'joi';
 import { Adress } from "../entities/Adress";
 import { User } from "../entities/User";
 import dataVerification from "../services/dataVerification";
+import bcrypt from 'bcrypt';
 
 export class UserController{
     async addUser(req: Request, res: Response){
@@ -29,6 +30,10 @@ export class UserController{
                 if(!dataVerf){
                     return res.status(204).json({message: 'Campos Inválidos'});
                 } else {
+
+                    const hashPassword = await bcrypt.hash(newUser.password_user, 10);
+                    const hashCpf =  await bcrypt.hash(newUser.cpf_user, 10);
+
                     const Address = new Adress();
                     Address.bairro_user = newUser.bairro_user;
                     Address.rua_user = newUser.rua_user;
@@ -41,16 +46,19 @@ export class UserController{
                     user.first_name_user = newUser.first_name_user;
                     user.last_name_user = newUser.last_name_user;
                     user.email_user = newUser.email_user;
-                    user.password_user = newUser.password_user;
-                    user.cpf_user = newUser.cpf_user;
+                    user.password_user = hashPassword;
+                    user.cpf_user = hashCpf;
                     user.number_user = newUser.number_user;
                     user.Adress = Address;
                     await user_info_Repository.manager.save(user);
 
                     
-                    
+                    console.log(hashPassword)
+                    console.log(hashCpf);
 
                     return res.status(201).redirect('/sucessCadastro');
+
+                    
                 } 
         } catch (error) {
             console.log(error);
