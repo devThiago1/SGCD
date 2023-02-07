@@ -26,7 +26,7 @@ export class UserController{
 
         try{
             const dataVerf = dataVerification(newUser);
-                if(dataVerf == false){
+                if(!dataVerf){
                     return res.status(204).json({message: 'Campos Inválidos'});
                 } else {
                     const Address = new Adress();
