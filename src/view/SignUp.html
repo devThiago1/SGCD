@@ -19,7 +19,9 @@
         <nav class="navbar navbar-expand-lg opacity-40 ">
             <div class="container-fluid">
                 <div class="container-logo" id="logo">
-                    <img src="/public/logoSGCD-removebg-preview.png"  alt="LOGO" style="max-height: 100px; margin-right: 5%;margin-top: 5%;">
+                    <a href="/Home" >
+                        <img src="/public/logoSGCD-removebg-preview.png"  alt="LOGO" style="max-height: 100px; margin-right: 5%;margin-top: 5%;">
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <span class="text-light" style="margin-left: 35%; margin-right: 10%;">
@@ -57,7 +59,7 @@
             <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label text-light">CPF:</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="cpf" aria-label="Username" aria-describedby="addon-wrapping" name="cpf_user"  placeholder="00000000000" required>
+                    <input type="text" class="form-control" id="cpf" aria-label="Username" aria-describedby="addon-wrapping" name="cpf_user"  placeholder="00000000000" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
                 </div>
             </div>
             <div class="mb-3 ">
@@ -70,7 +72,7 @@
             <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label text-light">CEP:       (Da localização que você deseja receber as notificações)</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" name="cep_user"  placeholder="00000000000" required id="cep">
+                    <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" name="cep_user"  placeholder="00000000000" pattern="\d{5}-\d{3}" required id="cep">
                 </div>
             </div>
             <div class="mb-3">

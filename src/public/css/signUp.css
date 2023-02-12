@@ -19,26 +19,6 @@
     
 }
 
-.navbar a{
-    list-style: none;
-    text-decoration: none;
-    color: #f2f2f2;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 40px;
-    border: #0477BF;
-    letter-spacing: 1px;
-    transition: ease .50s;
-    padding: 15px 20px;
-}
-
-.navbar a:hover{
-    color: #0477BF;
-    background-color: #f2f2f2;
-    border: 7px;
-    display: flex;
-    justify-content: center;
-}
 
 #navbar-icon{
     font-size: 25px;
@@ -72,6 +52,9 @@
     color: #f2f2f2;
     margin-top: 7%;
 }
+input:invalid {
+    border: 1px solid red;
+  }
 
 @media(max-width:768px){
     .container-logo{

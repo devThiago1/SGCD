@@ -53,8 +53,7 @@ export class UserController{
                     await user_info_Repository.manager.save(user);
 
                     
-                    console.log(hashPassword)
-                    console.log(hashCpf);
+                    
 
                     return res.status(201).redirect('/sucessCadastro');
 
