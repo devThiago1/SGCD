@@ -1,14 +1,11 @@
 package br.com.system;
 
 public class Manager {
-    
-
     private static  String name= "Vinicius";
     private static String login = "vvv";
     private static String password= "007";
  
-
-    public static String getName() {
+     public static String getName() {
         return name;
     }
     public static void setName(String name) {
